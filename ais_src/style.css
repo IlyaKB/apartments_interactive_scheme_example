@@ -1,3 +1,159 @@
+@media screen and (max-height: 770px) { 
+
+.left-content-regular .inner {
+height: 100%;
+}
+
+
+.right-content-regular {
+	height: 40%;
+	width: 50%;
+	z-index: 999999999;
+}	
+
+.left-content-regular {
+		height: 40%;
+	z-index: 999999999;
+}
+
+.inner {
+	height: 100%;
+	width: 100%;
+}
+
+		.content-progress {
+	margin-top: -60px;
+	z-index: 0;
+}
+
+
+
+
+	
+	.about-main {
+		width: 68%;
+	}
+	
+		.about-main-2 {
+		width: 100%;
+	}
+	
+	.clear-20 {
+	height: 20px;
+}
+
+	.clear-10 {
+	height: 0px;
+}
+
+
+.intro {
+	position: fixed; 
+	top: 90px; 
+	}	
+		
+		
+.intro h1 {
+	font-size: 64px;
+}	
+
+
+.intro h2 {
+	font-size: 28px;
+}	
+
+
+.right-content {
+	top: 130px;
+}
+
+
+	.clear-60 {
+	height: 30px;
+}
+
+
+	.clear-50 {
+	height: 20px;
+}
+
+
+}
+
+
+
+@media screen and (max-height: 650px) { 
+.right-content-regular {
+	height: 30%;
+	z-index: 999999999;
+}	
+
+.left-content-regular {
+		height: 30%;
+	z-index: 999999999;
+}
+
+.left-content-regular .inner {
+height: 100%;
+}
+
+
+
+.inner {
+	height: 100%;
+}
+
+
+		.content-progress {
+	margin-top: -90px;
+	z-index: 0;
+}
+
+.header-regular-progress {
+	display: none;
+}
+
+
+}
+
+
+
+
+
+
+
+			#komnaty {
+		
+			}
+
+
+			
+			@media screen and (max-width: 1425px) {
+					#komnaty {
+			display: none;
+			}
+			}
+			
+			
+						@media screen and (max-width: 1345px) {
+					#etazh {
+			display: none;
+			}
+			}
+			
+			
+									@media screen and (max-width: 1150px) {
+					#etazh {
+			display: inline-block;
+			}
+			
+								#komnaty {
+			display: inline-block;
+			}
+			}
+
+
+
 @font-face {
 	font-family: pf_din_text_comp_proregular;
 	src: url("/ais_src/ufonts.com_pfdintextcomppro-regular.eot");
@@ -7,24 +163,38 @@
 		url("/ais_src/ufonts.com_pfdintextcomppro-regular.ttf") format("truetype");
 }
 
-body {
-	background-color: #eee;
-}
+
 
 .ais-content {
 	text-align: right;
 	white-space: nowrap;
+		-webkit-transition: all 0.3s ease !important;
+	transition: all 0.3s ease !important;
 }
 .ais-content > div {
 	display: inline-block;
 	vertical-align: top;
 	white-space: normal;
 	text-align: left;
+	-webkit-transition: all 0.3s ease !important;
+	transition: all 0.3s ease !important;
 }
 
 .ais-master {
 	width: 50%;
 	max-width: 754px;
+	float: left;
+}
+
+.ais-detail {
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+	.ais-detail {
+	margin-left: 0px;
+}
+
 }
 
 /*--- filters ---*/
@@ -70,7 +240,7 @@ body {
 	text-align: center;
 }
 .ais-master-filters .submits {
-	padding-right: 17px;
+	padding-right: 8px;
 	margin-top: -1px;
 }
 .ais-master-filters .submits button {
@@ -137,7 +307,7 @@ body {
 	background-color: #fff;
 	cursor: default;
 	padding-top: 4px;
-	margin-top: 25px;
+	margin-top: 0px;
 	min-width: 308px;
 }
 
@@ -190,9 +360,17 @@ body {
 	padding-left: 5px;
 }
 .ais-apartment-summary {
-	background: url(/ais_src/house_info.png) 0 0 no-repeat;
+	/* background: url(/ais_src/house_info.png) 0 0 no-repeat;*/
+	/* background-color: #4f4f4f;*/
+	background-color: #91704a;
 	background-size: auto 100%;
 }
+
+		@media screen and (max-width: 1150px) {
+			.ais-apartment-summary { margin-bottom: 40px !important;
+		}
+
+		}
 .ais-apartment-summary div, .ais-apartment-summary span {
 	color: #fff;
 	font-size: 13pt;
@@ -211,6 +389,7 @@ body {
 }
 .ais-detail-plan {
 	border: 1px solid #ccc;
+	text-align: center;
 }
 .ais-detail-plan img {
 	width: 100%;

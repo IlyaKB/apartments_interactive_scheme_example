@@ -2,16 +2,16 @@
 
 	<div class="ais-master">
 
-		<div class="ais-master-filters">
+		<div class="ais-master-filters" style="text-align: right;">
 			<div>
-				<div>КОМНАТЫ</div>
+				<div id="komnaty">КОМНАТЫ</div>
 				<div data-bind="foreach: filters.rooms" class="rooms">
 					<button data-bind="html: roomsText,
 										event: { 'click': $root.clickFiltersRooms },
 										css: { 'selected': selected }">Студия</button>
 				</div>
 			</div>
-			<div>
+			<div id="etazh">
 				<div>ЭТАЖ</div>
 				<div><input data-bind="value: filters.minFloor"/></div>
 				<div>—</div>
@@ -25,8 +25,8 @@
 			</div>
 			<div>
 				<div class="submits">
-					<button class="clear" data-bind="event: { 'click': clearFilters }"><div><div><span>&nbsp;</span></div></div></button>
-					<button class="submit" data-bind="event: { 'click': setFilters }"><div><div>НАЙТИ</div></div></button>
+					<!--<button class="clear" data-bind="event: { 'click': clearFilters }"><div><div><span>&nbsp;</span></div></div></button>!-->
+					<button class="submit" data-bind="event: { 'click': setFilters }"><div><div>ОК</div></div></button>
 				</div>
 			</div>
 		</div><!-- /.ais-filters -->
@@ -83,7 +83,7 @@
 				<div><div>Корпус:</div><div>2</div></div>
 				<div><div>Секция:</div><div data-bind="text: section">1</div></div>
 				<div><div>Этаж:</div><div data-bind="text: floor">2</div></div>
-				<div><div>№ на площадке:</div><div data-bind="text: numInPlatform">8</div></div>
+				<!--<div><div>№ на площадке:</div><div data-bind="text: numInPlatform">8</div></div>!-->
 				<div><div>Комнат:</div><div data-bind="html: roomsText">1</div></div>
 				<div><div>Площадь:</div><div><span data-bind="text: squareCommon">38.2</span> м<sup>2</sup></div></div>
 				<div><div>Стоимость:</div><div><span data-bind="text: (articlsalesCost/1000000).toFixed(3)">4.577</span> млн руб.</div></div>
@@ -94,10 +94,13 @@
 	</div><!-- /.ais-master -->
 
 	<div class="ais-detail" data-bind="visible: oApartmentSelect">
+
+	
+	<div class="ais-detail-close"><button data-bind="click: $root.closeDetail"><span class="genericon genericon-close-alt"></span></button></div>
 		<!-- ko with: oApartmentSelect() -->
 		<div class="ais-detail-info">
-			<div>«CМОЛЬНАЯ, 44» КОМПЛЕКС АПАРТАМЕНТОВ</div>
-			<table width="230px">
+			<!--<div>«CМОЛЬНАЯ, 44» КОМПЛЕКС АПАРТАМЕНТОВ</div>!-->
+			<table width="230px" class="mobile-view">
 				<tbody>
 					<tr>
 						<td>Стоимость:</td>
@@ -117,11 +120,141 @@
 					</tr>
 				</tbody>
 			</table>
+			
+			
+			
+			<div class="desktop-view">
+			
+			<h1>Детальная информация</h1>
+				<div style="width: 100%;">
+				
+					<div class="detail-div">
+						<div class="detail" style="float: left;">Стоимость: </div>
+						<div style="float: left; margin-left: 5px;"><span data-bind="text: (articlsalesCost/1000000).toFixed(3)"></span> млн руб.</div>
+						<div style="clear: both; height: 0px;"></div>
+						
+						<div style="float: left;">Площадь: </div>
+						<div style="float: left; margin-left: 5px;"><span data-bind="text: squareCommon"></span> м<sup>2</sup></div>
+						<div style="clear: both; height: 0px;"></div>
+					</div>
+					
+			
+					<div class="detail-div-2">			
+						<div style="float: left;">Комнат: </div>
+						<div style="float: left; margin-left: 5px;"><div data-bind="html: roomsText"></div></div>
+						<div style="clear: both; height: 0px;"></div>
+						<div style="float: left;">Этаж: </div>
+						<div style="float: left; margin-left: 5px;"><div data-bind="html: floor"></div></div>
+						<div style="clear: both; height: 0px;"></div>
+					</div>	
+					
+					<div class="detail-div-3">
+						<div style="float: left;">Корпус: </div>
+						<div style="float: left; margin-left: 5px;"><div>2</div></div>
+
+						<div style="clear: both; height: 0px;"></div>
+					</div>	
+				</div>
+			</div>
+			<div style="clear: both; height: 10px;"></div>
+			
+			
+			<style>
+			
+
+			
+			.detail-div {
+			width: 30%; 
+			float: left;
+			}
+			
+			.detail-div-2 {
+			width: 30%; 
+			float: left;
+			margin-left: 20px;			
+			}
+
+
+			.detail-div-3 {
+			width: 30%; 
+			float: left;
+			margin-left: 20px;
+			}	
+			
+
+			
+			
+			@media screen and (max-width: 1150px) {
+			
+
+			
+			.detail-div {
+			width: 50%; 
+			float: left;
+			}
+			
+			.detail-div-2 {
+			width: 50%; 
+			float: left;
+			margin-left: 0px;			
+			}
+
+
+			.detail-div-3 {
+			width: 100%; 
+			float: left;
+			margin-left: 0px;
+			}			
+			
+			}			
+			
+			
+			.ais-detail-close button {
+			float: right;
+			margin-top: 10px;
+			margin-right: 5px;
+			background: transparent;
+			border: 0;
+			cursor: pointer;
+			outline: none;
+			-webkit-transition: all 0.3s ease !important;
+			transition: all 0.3s ease !important;
+			}
+			
+			.ais-detail-close button:hover {
+			opacity: 0.8;
+			}
+			
+			.ais-detail-close button:active {
+			margin-top: 11px;
+			margin-right: 4px;
+			}
+			
+			.mobile-view {
+			display: none;
+			}
+			
+			.desktop-view {
+			margin-bottom: 0px !important;
+			font-size: 19px !important;
+			padding-left: 10px;
+			}
+			
+			.desktop-view h1{
+			margin-bottom: 3px;
+			text-transform: uppercase;
+			}
+			
+			
+			</style>
+			
+			
+			
 		</div><!--
 		--><div class="ais-detail-plan">
 			<img data-bind="attr: { src: '/ais_src/data/' + numInPlatform + '.jpg' }"/>
 		</div><!--
-		--><!--<div class="ais-detail-close"><button data-bind="click: $root.closeDetail">&nbsp;</button></div>-->
+		-->
 		<!-- /ko -->
 	</div><!-- /.ais-detail -->
 
