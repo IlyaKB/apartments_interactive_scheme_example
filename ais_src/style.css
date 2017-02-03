@@ -1,0 +1,382 @@
+@font-face {
+	font-family: pf_din_text_comp_proregular;
+	src: url("/ais_src/ufonts.com_pfdintextcomppro-regular.eot");
+	src: local('@'),
+		url("/ais_src/ufonts.com_pfdintextcomppro-regular.eot?#iefix") format("embedded-opentype"), 
+		url("/ais_src/ufonts.com_pfdintextcomppro-regular.woff") format("woff"),
+		url("/ais_src/ufonts.com_pfdintextcomppro-regular.ttf") format("truetype");
+}
+
+body {
+	background-color: #eee;
+}
+
+.ais-content {
+	text-align: right;
+	white-space: nowrap;
+}
+.ais-content > div {
+	display: inline-block;
+	vertical-align: top;
+	white-space: normal;
+	text-align: left;
+}
+
+.ais-master {
+	width: 50%;
+	max-width: 754px;
+}
+
+/*--- filters ---*/
+
+.ais-master-filters {
+	background-color: #fff;
+	min-height: 30px;
+	font-size: 13px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	padding-left: 20px;
+	padding-top: 12px;
+	padding-bottom: 6px;
+}
+.ais-master-filters > div, .ais-master-filters > div > div, .ais-master-filters > div > div > div {
+	display: inline-block;
+}
+.ais-master-filters > div {
+	padding-bottom: 6px;
+}
+.ais-master-filters > div > div, .ais-master-filters span {
+	white-space: nowrap;
+}
+.ais-master-filters button {
+	height: 20px;
+	font-size: 13px;
+	background-color: #fff;
+	color: #2d2d2e;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	min-width: 22px;
+	border-radius: 2px;
+}
+.ais-master-filters .rooms .selected {
+	background-color: #b3b3b3;
+	border: 1px solid #b3b3b3;
+	color: #fff;
+}
+.ais-master-filters input {
+	width: 22px;
+	font-size: 13px;
+	border: none;
+	border-bottom: 1px #aaa dashed;
+	text-align: center;
+}
+.ais-master-filters .submits {
+	padding-right: 17px;
+	margin-top: -1px;
+}
+.ais-master-filters .submits button {
+	padding: 0px;
+	border: none;
+	min-width: 20px;
+}
+.ais-master-filters .clear {
+	width: 20px;
+	margin-right: 5px;
+}
+.ais-master-filters .clear > div {
+	height: 20px;
+	padding-left: 5px;
+	background-image: url(/ais_src/but_s_grey.png);
+	color: #ffffff;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	font-size: 13px;
+	cursor: pointer;
+}
+.ais-master-filters .clear > div > div {
+	height: 19px;
+	padding: 0 5px 0 0;
+	padding-top: 1px;
+	background-image: url(/ais_src/but_s_grey.png);
+	color: #ffffff;
+	background-position: 100% 0;
+	background-repeat: no-repeat;
+	line-height: 20px;
+	display: inline-block;
+}
+.ais-master-filters .clear > div > div > span {
+	display: inline-block;
+	width: 9px;
+	background: url(/ais_src/reset.png) 50% 40% no-repeat;
+}
+.ais-master-filters .submit > div {
+	height: 20px;
+	padding-left: 11px;
+	background-image: url(/ais_src/but_s_red.png);
+	color: #ffffff;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	font-size: 13px;
+	cursor: pointer;
+}
+.ais-master-filters .submit > div > div {
+	height: 20px;
+	padding: 0 11px 0 0;
+	padding-top: 0px;
+	background-image: url(/ais_src/but_s_red.png);
+	color: #ffffff;
+	background-position: 100% 0;
+	background-repeat: no-repeat;
+	line-height: 20px;
+	display: inline-block;
+}
+
+/*--- scheme ---*/
+.ais-master .ais-scheme {
+	background-color: #fff;
+	cursor: default;
+	padding-top: 4px;
+	margin-top: 25px;
+	min-width: 308px;
+}
+
+.ais-master .ais-scheme td, .ais-scheme th {
+	text-align: center;
+}
+
+.ais-master .ais-scheme > table > tbody > tr.selected {
+	background-color: #999;
+}
+
+.ais-master .ais-scheme .ais-floor > div {
+	display: inline-block;
+	text-align: center;
+}
+
+.ais-master .ais-scheme .ais-floor .ais-apartment {
+	display: inline-block;
+	width: 17px;
+	border: 1px gray solid;
+}
+.ais-master .ais-scheme .ais-floor div.visited {
+	background_: #555;
+}
+.ais-master .ais-scheme .ais-floor div.selected {
+	background_: #c9161e;
+}
+
+/*--- .ais-master .ais-apartment-summary ---*/
+
+.ais-apartment-summary {
+	min-height: 35px;
+	text-align: left;
+	min-width: 308px;
+}
+.ais-apartment-summary > div {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.ais-apartment-summary > div > div, .ais-master .ais-apartment-summary > div > div > div {
+	display: inline-block;
+}
+.ais-apartment-summary > div > div {
+	white-space: nowrap;
+}
+.ais-apartment-summary > div > div {
+	margin-left: 16px;
+}
+.ais-apartment-summary > div > div > div:nth-of-type(2) {
+	padding-left: 5px;
+}
+.ais-apartment-summary {
+	background: url(/ais_src/house_info.png) 0 0 no-repeat;
+	background-size: auto 100%;
+}
+.ais-apartment-summary div, .ais-apartment-summary span {
+	color: #fff;
+	font-size: 13pt;
+}
+
+/*--- ais-content-popup ---*/
+.ais-detail {
+	width: 50%;
+	max-width: 880px;
+	overflow: hidden;
+	background: #fff;
+	padding: 5px;
+}
+.ais-detail > div {
+
+}
+.ais-detail-plan {
+	border: 1px solid #ccc;
+}
+.ais-detail-plan img {
+	width: 100%;
+	max-width: 590px;
+}
+.ais-detail-info table td {
+	white-space: nowrap;
+}
+/*.ais-detail-close {
+	position: relative;
+	width: 0px;
+	height: 0px;
+	left: 10px;
+	top: -17px;
+}
+.ais-detail-close button {
+	width: 13px;
+	height: 13px;
+	padding: 0px;
+	cursor: pointer;
+	background: url(/ais_src/close.gif) 0 0 no-repeat;
+	border: none;
+}*/
+.ais-detail {
+	white-space: nowrap;
+}
+.ais-detail-info > div:nth-of-type(1) {
+	white-space: normal;
+	font-size: 25px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.ais-detail-info table {
+	border-spacing: 0px;
+}
+.ais-detail-info table tr td {
+	border-bottom: 1px solid #ccc;
+	height: 21px;
+	font-size: 11px;
+	font-family: Arial, Geneva, sans-serifbody;
+	color: rgb(115, 115, 115);
+	text-align: left;
+}
+.ais-detail-info table tr td div, .ais-detail .ais-detail-info table tr td span {
+	color: #333333
+}
+.ais-detail-info table tr td:first-child {
+	width: 133px;
+}
+.ais-detail-info table tr td:last-child {
+	width: 122px;
+}
+.ais-detail-info table tr:last-child td {
+	border: none;
+}
+
+/*** Second part ***/
+
+.ais-content, .ais-content input, .ais-content button {
+	font-family: 'pf_din_text_comp_proregular', sans-serif;
+	font-size: 10px;
+}
+
+.ais-scheme .ais-roof {
+	height: 19px;
+	background-image: url(/ais_src/house_br_t2.gif);
+	text-align: center;
+}
+.ais-scheme .ais-roof > div {
+	height: 19px;
+	width: 203px;
+	display: inline-block;
+	background: url(/ais_src/house_br_top.gif) 0 100% no-repeat;
+}
+.ais-scheme .ais-roof > div > div {
+	height: 19px;
+	margin-left: 26px;
+	background: url(/ais_src/house_br_top.gif) 100% 100% no-repeat;
+}
+
+.ais-scheme tr td.ais-floor-num > div {
+	display: inline-block;
+	height: 15px;
+	width: 48px;
+	background: #bebebe;
+	text-align: center;
+	color: #fff;
+	padding-top: 3px;
+	font-size: 11px;
+}
+.ais-scheme tr .ais-floor-num.left {
+	text-align: left;
+}
+.ais-scheme tr .ais-floor-num.right {
+	text-align: right;
+}
+.ais-scheme tr.selected td.ais-floor-num > div {
+	background: #888;
+}
+
+.ais-scheme tr .ais-floor {
+	height: 20px;
+	text-align: center;
+	background: url(/ais_src/house_br_c2.gif) 0 0 no-repeat;
+}
+.ais-scheme tr .ais-floor > div {
+	background: url(/ais_src/house_br_bg.gif) 0 0 repeat;
+}
+
+.ais-scheme tr.selected .ais-floor {
+	background: none !important;
+}
+.ais-scheme tr.selected .ais-floor > div > div {
+	background: rgba(0,0,0,0.5);
+}
+
+.ais-apartment {
+	border: none !important;
+	height: 20px;
+	vertical-align: top;
+}
+
+.ais-apartment.in-filter {
+	cursor: pointer;
+}
+.ais-apartment > div {
+	height: 14px;
+	padding-top: 3px;
+	background: url(/ais_src/house_br_inact.gif) 50% 2px repeat-x;
+	font-family: 'pf_din_text_comp_proregular', sans-serif;
+	font-size: 10px;
+	color: #666666;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.ais-apartment.in-filter > div {
+	background: url(/ais_src/house_act.gif) 50% 2px repeat-x;
+}
+.ais-scheme .ais-apartment.in-filter.visited > div {
+	background: url(/ais_src/house_vis.gif) 50% 2px repeat-x;
+	color: #fff;
+}
+.ais-scheme .ais-apartment.in-filter.selected > div {
+	background: url(/ais_src/house_sel.gif) 50% 0px repeat;
+	color: #fff;
+	height: 20px;
+}
+
+.ais-basement {
+	height: 24px;
+	background: url(/ais_src/house_br_b2.gif);
+	text-align: center;
+}
+.ais-basement > div {
+	display: inline-block;
+	height: 23px;
+	width: 214px;
+	background: #d1a16a;
+	border-top: 1px solid #f6dcbf;
+}
+.ais-basement > div > div {
+	background: url(/ais_src/house_br_door.gif) 50% 8px no-repeat;
+	height: 30px;
+}
+.ais-basement0 {
+	background: #d1a16a;
+	height: 7px;
+	min-width: 308px;
+}

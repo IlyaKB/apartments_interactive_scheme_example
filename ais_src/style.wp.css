@@ -1,0 +1,64 @@
+.ais-content {
+	color: #000;
+}
+.inner-2 > p {
+	display: none;
+}
+
+/*** DESKTOP ***/
+
+.right-content-regular.active {
+	line-height: normal;
+	padding: 30px 0 20px 20px;
+	background: rgba(0,0,0, 0.5);
+	margin-right: 25px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.right-content-regular .inner {
+	overflow: visible;
+	width: 100%;
+}
+
+/*** MOBILE ***/
+
+.mobile-right-content-regular {
+	line-height: normal;
+}
+
+.mobile-right-content-regular .ais-content {
+	white-space: normal;
+}
+.mobile-right-content-regular .ais-content > div {
+	display: block;
+	width: 100%;
+}
+
+.mobile-right-content-regular .ais-detail {
+	width: 100%;
+	max-width: 754px;
+	height: 100%;
+	padding: 0px;
+}
+.mobile-right-content-regular .ais-detail-plan {
+	width: 100%;
+}
+.mobile-right-content-regular .ais-detail-plan img {
+	width: 100%;
+}
+.mobile-right-content-regular .ais-detail .ais-detail-info {
+	width: 100%;
+	margin-left: 0px;
+	white-space: normal;
+	padding: 10px;
+}
+.mobile-right-content-regular .ais-detail .ais-detail-info > div:first-child {
+	width: 100%;
+	margin-bottom: 0px;
+	text-align: left;
+}
+.mobile-right-content-regular .ais-detail .ais-detail-close {
+	top: -384px;
+	left: 456px;
+}
